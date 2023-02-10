@@ -1,3 +1,4 @@
+#ci fa vedere la nostra tabella e rinomina la tabella database a mydatabase
 import mysql.connector
 
 mydb = mysql.connector.connect(

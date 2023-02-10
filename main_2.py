@@ -1,3 +1,5 @@
+#ti serve per creare una tabella visualizzarla e aggiunger una chiave primaria a una tabella gia esistente 
+
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -9,7 +11,4 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("CREATE TABLE customers (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255))")
-
-for x in mycursor:
-  print(x)
+mycursor.execute("ALTER TABLE customers REMOVE COLUMN id INT AUTO_INCREMENT PRIMARY KEY")
